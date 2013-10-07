@@ -1,0 +1,27 @@
+{
+  "name": "backbonify",
+  "version": "0.0.0",
+  "description": "Skeleton project showing Backbone being used with Browserify",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js",
+    "start": "beefy src/app.js --live -- -d"
+  },
+  "keywords": [
+    "backbone",
+    "browserify"
+  ],
+  "author": "Morgan 'ARR!' Allen",
+  "license": "MIT",
+  "dependencies": {
+    "backbone": "~1.0.0",
+    "jquery-browserify": "~1.8.1"
+  },
+  "devDependencies": {
+    "assert": "~0.4.9",
+    "tape": "~1.1.1",
+    "beefy": "~0.4.4",
+    "grunt": "~0.4.1",
+    "browserify": "~2.34.0"
+  }
+}
