@@ -1,7 +1,7 @@
 var tr = require("jasmine-tapreporter");
 jasmine.getEnv().addReporter(new tr);
 
-var Person = require("../src/models/Person");
+var Person = require("../src/js/models/Person");
 var name = "Fry";
 
 describe("Person Model", function(t) {

@@ -9,7 +9,7 @@ module.exports = function(grunt) {
     browserify: {
       dist: {
         files: {
-          "build/bundle.js": "src/app.js"
+          "build/bundle.js": "src/js/app.js"
         },
         options: {
           debug: true
@@ -18,13 +18,13 @@ module.exports = function(grunt) {
 
       inst: {
         files: {
-          "build/bundle.instrumented.js" : "build/instrumented/src/app.js"
+          "build/bundle.instrumented.js" : "build/instrumented/src/js/app.js"
         }
       }
     },
 
     instrument: {
-      files: 'src/**/*.js',
+      files: 'src/js/**/*.js',
       options: {
         lazy: true,
         basePath: 'build/instrumented/'
@@ -47,4 +47,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', [ 'browserify:dist', 'uglify' ]);
   grunt.registerTask('inst', [ 'instrument', 'browserify:inst' ]);
+  grunt.registerTask('all', [ 'default', 'inst', 'karma' ]);
 }
