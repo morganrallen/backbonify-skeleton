@@ -1,3 +1,5 @@
+jasmine.getEnv().addReporter(require("jasmine-tapreporter"));
+
 var Person = require("../src/models/Person");
 var name = "Fry";
 
