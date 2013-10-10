@@ -1,6 +1,6 @@
 {
   "name": "backbonify",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Skeleton project showing Backbone being used with Browserify",
   "main": "index.js",
   "scripts": {
@@ -34,5 +34,18 @@
     "karma-coverage": "~0.1.0",
     "karma-browserify": "0.0.4",
     "karma-htmlfile-reporter": "~0.1.0"
+  },
+
+  "testling": {
+    "files": "test/test.js",
+    "browsers": {
+      "ie": [ 9, 10 ],
+      "firefox": [ 23, 24, "nightly" ],
+      "chrome": [ 28, 29, "canary" ],
+      "safari": [ "5.0.5", 5.1 ],
+      "opera": [ 15, "next" ]
+      "android-browser": [ 4.2 ],
+      "iphone": [ 6 ]
+    }
   }
 }
