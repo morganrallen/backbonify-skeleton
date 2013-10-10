@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-browserify');
+  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-istanbul');
   grunt.loadNpmTasks('grunt-karma');
@@ -34,6 +35,27 @@ module.exports = function(grunt) {
     karma: {
       unit: {
         configFile: "karma.conf.js"
+      }
+    },
+
+    less: {
+      dev: {
+        files: {
+          'build/bundle.css': "src/css/main.less"
+        },
+        options: {
+          dumpLineNumbers: 'all',
+          report: true
+        }
+      },
+      dist: {
+        files: {
+          'build/bundle.min.css': "src/css/main.less"
+        },
+        options: {
+          report: true,
+          yuicompress: true
+        }
       }
     },
 
