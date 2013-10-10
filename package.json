@@ -39,7 +39,6 @@
     "files": "test/test.js",
     "browsers": {
       "ie": [
-        9,
         10
       ],
       "firefox": [
