@@ -7,8 +7,11 @@ module.exports = Backbone.Model.extend({
     Backbone.Model.prototype.initialize.call(this, models, options);
 
     this.view = new PersonView({
-      model: this,
-      parent: this.collection.view.el
+      model: this
     });
+  },
+
+  greet: function() {
+    return "Hello, " + this.attributes.name;
   }
 });
