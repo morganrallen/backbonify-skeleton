@@ -1,3 +1,5 @@
+if(!this.jasmine) jasmine = require("jasmine");
+
 var tr = require("jasmine-tapreporter");
 jasmine.getEnv().addReporter(new tr);
 
