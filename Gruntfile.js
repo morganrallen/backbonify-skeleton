@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 
       inst: {
         files: {
-          "build/bundle.instrumented.js" : "build/instrumented/src/js/app.js"
+          "build/bundle.instrumented.js": "build/instrumented/src/js/app.js"
         }
       }
     },
@@ -67,7 +67,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('default', [ 'browserify:dist', 'uglify' ]);
-  grunt.registerTask('inst', [ 'instrument', 'browserify:inst' ]);
-  grunt.registerTask('all', [ 'default', 'inst', 'karma' ]);
+  grunt.registerTask('default', ['browserify:dist', 'uglify']);
+  grunt.registerTask('inst', ['instrument', 'browserify:inst']);
+  grunt.registerTask('all', ['default', 'inst', 'karma']);
 }

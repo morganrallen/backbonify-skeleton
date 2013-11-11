@@ -1,7 +1,8 @@
 if(!this.jasmine) jasmine = require("jasmine");
 
 var tr = require("jasmine-tapreporter");
-jasmine.getEnv().addReporter(new tr);
+jasmine.getEnv()
+  .addReporter(new tr);
 
 var Person = require("../src/js/models/Person");
 var name = "Fry";
@@ -14,17 +15,21 @@ describe("Person Model", function(t) {
   });
 
   it("User created", function() {
-    expect(typeof user).toBe("object");
+    expect(typeof user)
+      .toBe("object");
   });
   it("user is instanceof Person", function() {
-    expect(user instanceof Person).toBe(true);
+    expect(user instanceof Person)
+      .toBe(true);
   });
 
   it("greeting is correct", function() {
-    expect(user.greet()).toBe("Hello, " + name);
+    expect(user.greet())
+      .toBe("Hello, " + name);
   });
 
   it("names is correct", function() {
-    expect(user.get("name")).toBe(name);
+    expect(user.get("name"))
+      .toBe(name);
   });
 });
